@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="1.2" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+    <managed-bean>
+        <managed-bean-name>SessionBean1</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.SessionBean1</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>Index</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.Index</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>ApplicationBean1</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.ApplicationBean1</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>RequestBean1</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.RequestBean1</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>Header</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.Header</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>leftMenu</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.leftMenu</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>Main</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.Main</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>Error</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.Error</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>GestionarLocalidades</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.GestionarLocalidades</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/Index.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/Main.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Main.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>bajaLocalidades</from-outcome>
+            <to-view-id>/BLocalidades.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarLocalidades</from-outcome>
+            <to-view-id>/ModificarLoc.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>altaLocalidades</from-outcome>
+            <to-view-id>/AgregarLocalidades.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/BajaLocalidades.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/BajaLocalidades.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>ModificarLocalidad</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.ModificarLocalidad</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>BLocalidades</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.BLocalidades</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>resources$InformeBaja</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.resources.InformeBaja</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>Exito</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.Exito</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/Exito.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/Main.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Error.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/Main.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/BLocalidades.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>exito</from-outcome>
+            <to-view-id>/Exito.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/Error.jsp</to-view-id>
+        </navigation-case>
+       <navigation-case>
+            <from-outcome>bajaLocalidades</from-outcome>
+            <to-view-id>/BLocalidades.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarLocalidades</from-outcome>
+            <to-view-id>/ModificarLoc.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>altaLocalidades</from-outcome>
+            <to-view-id>/AgregarLocalidades.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>ModificarLoc</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.ModificarLoc</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>AgregarLocalidades</managed-bean-name>
+        <managed-bean-class>clienteservidorwar.AgregarLocalidades</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/AgregarLocalidades.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>exito</from-outcome>
+            <to-view-id>/Exito.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/Error.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>bajaLocalidades</from-outcome>
+            <to-view-id>/BLocalidades.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarLocalidades</from-outcome>
+            <to-view-id>/ModificarLoc.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>altaLocalidades</from-outcome>
+            <to-view-id>/AgregarLocalidades.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/ModificarLoc.jsp</from-view-id>
+         <navigation-case>
+            <from-outcome>exito</from-outcome>
+            <to-view-id>/Exito.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/Error.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>bajaLocalidades</from-outcome>
+            <to-view-id>/BLocalidades.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarLocalidades</from-outcome>
+            <to-view-id>/ModificarLoc.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>altaLocalidades</from-outcome>
+            <to-view-id>/AgregarLocalidades.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

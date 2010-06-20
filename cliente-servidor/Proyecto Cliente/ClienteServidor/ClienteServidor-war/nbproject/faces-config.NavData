@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="Exito.jsp" x="691" y="208" zoom="false"/>
+        <Node id="Index.jsp" x="236" y="30" zoom="false"/>
+        <Node id="AgregarLocalidades.jsp" x="485" y="-134" zoom="false"/>
+        <Node id="resources/InformeBaja.jsp" x="67" y="182" zoom="false"/>
+        <Node id="BLocalidades.jsp" x="329" y="455" zoom="false"/>
+        <Node id="Main.jsp" x="392" y="262" zoom="false"/>
+        <Node id="BajaLocalidades.jsp" x="616" y="61" zoom="false"/>
+        <Node id="ModificarLocalidad.jsp" x="26" y="93" zoom="true"/>
+        <Node id="ModificarLoc.jsp" x="312" y="-533" zoom="false"/>
+        <Node id="Error.jsp" x="77" y="271" zoom="false"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : leftMenu
+    Created on : 13/06/2010, 21:27:21
+    Author     : justomiguel
+-->
+<div style="-rave-layout: grid; width: 400px; height: 200px" xmlns:f="http://java.sun.com/jsf/core" xmlns:webuijsf="http://www.sun.com/webui/webuijsf">
+    <f:subview id="leftMenu">
+        <webuijsf:image id="image1" style="left: 0px; top: 0px; position: absolute" url="/resources/leftMenu.png"/>
+        <webuijsf:label id="label1" style="left: 24px; top: 48px; position: absolute" text="Gestionar Localidades"/>
+        <webuijsf:hyperlink actionExpression="#{leftMenu.hyperlink1_action}" binding="#{leftMenu.hyperlink1}" id="hyperlink1"
+            style="left: 48px; top: 120px; position: absolute" text="Remover Localidades"/>
+        <webuijsf:hyperlink actionExpression="#{leftMenu.hyperlink2_action}" id="hyperlink2" style="left: 48px; top: 72px; position: absolute" text="Agregar Localidades"/>
+        <webuijsf:hyperlink actionExpression="#{leftMenu.hyperlink3_action}" id="hyperlink3" style="left: 48px; top: 96px; position: absolute" text="Modificar Localidad"/>
+    </f:subview>
+</div>
