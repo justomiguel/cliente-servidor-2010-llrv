@@ -26,4 +26,14 @@ public interface ProvinciasFacadeRemote {
 
     List<Provincias> findAll();
 
+    public java.util.List<entity.Provincias> buscar(java.lang.String nombre, java.lang.String orden);
+
+    public java.util.List<entity.Provincias> ordenarAsc();
+
+    public java.util.List<entity.Provincias> ordenarDesc();
+
+    public java.util.List<entity.Provincias> listar(java.lang.String orden);
+
+    public boolean darAlta(java.lang.String nombre);
+
 }
