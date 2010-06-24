@@ -39,5 +39,44 @@ public class ProvinciasFacade implements ProvinciasFacadeRemote {
     public List<Provincias> findAll() {
         return em.createQuery("select object(o) from Provincias as o").getResultList();
     }
+        public boolean darAlta(String nombre){
+        if(!nombre.equals("")){
+        Provincias p = new Provincias();
+        p.setNombre(nombre);
+           this.edit(p);
+        return true;
+    }else{
+            return false;
+    }
 
+    }
+   public List<Provincias> buscar(String nombre, String orden){
+        if(orden.equals("Desc")){
+              System.out.println("Entro por desc");
+          return em.createQuery("SELECT p FROM Provincias p WHERE p.nombre LIKE :nombre ORDER BY p.nombre DESC").setParameter("nombre", nombre).getResultList();
+        }
+     if(orden.equals("Asc")){
+         System.out.println("Entro por Asc");
+      return em.createQuery("SELECT p FROM Provincias p WHERE p.nombre LIKE :nombre ORDER BY p.nombre ASC").setParameter("nombre", nombre).getResultList();
+    }
+     return em.createQuery("SELECT p FROM Provincias p WHERE p.nombre LIKE :nombre").setParameter("nombre", nombre).getResultList();
+}
+
+    public List<Provincias> ordenarAsc() {
+        return em.createQuery("SELECT p FROM Provincias p ORDER BY p.nombre ASC").getResultList();
+    }
+    public List<Provincias> ordenarDesc() {
+        return em.createQuery("SELECT p FROM Provincias p ORDER BY o.nombre DESC").getResultList();
+    }
+
+
+    public List<Provincias> listar(String orden){
+        if(orden.equals("Asc")){
+      List<Provincias>  lista = em.createQuery("SELECT p FROM Provincias p ORDER BY p.nombre ASC").getResultList();}
+        if(orden.equals("Desc")){
+      List<Provincias>  lista = em.createQuery("SELECT p FROM Provincias p ORDER BY p.nombre DESC").getResultList();}
+     
+       List<Provincias> lista = this.findAll();
+        return lista;
+    }
 }

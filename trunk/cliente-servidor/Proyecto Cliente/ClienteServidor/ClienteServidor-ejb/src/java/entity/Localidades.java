@@ -144,7 +144,7 @@ public class Localidades implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Localidades[id=" + id + "]";
+        return nombre;
     }
 
 }

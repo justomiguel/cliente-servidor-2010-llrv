@@ -26,4 +26,12 @@ public interface LocalidadesFacadeRemote {
 
     List<Localidades> findAll();
 
+    public void borrar(java.lang.Integer iden);
+
+    public java.util.List<entity.Localidades> buscar(java.lang.String nombre, java.lang.String orden, java.lang.String campo);
+
+    public java.util.List<entity.Localidades> buscarLocaProvincia(entity.Provincias i);
+
+    public java.util.List<entity.Localidades> listar(java.lang.String orden, java.lang.String campo);
+
 }

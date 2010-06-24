@@ -205,7 +205,7 @@ public class Personas implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Personas[cuilcuit=" + cuilcuit + "]";
+        return apellido+", "+nombres;
     }
 
 }

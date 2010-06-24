@@ -101,7 +101,7 @@ public class Zonas implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Zonas[nombre=" + nombre + "]";
+        return nombre;
     }
 
 }
